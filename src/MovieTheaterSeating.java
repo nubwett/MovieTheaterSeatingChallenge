@@ -76,4 +76,16 @@ public class MovieTheaterSeating {
     private String parseToCSV(String seatsWithSpaces) {
         return seatsWithSpaces.trim().replace(" ", ",");
     }
+
+    public String seatsTakenToString() {
+        String s = "";
+        for (int i = 0; i < rows/2; i++) {
+            for (int j = 0; j < columns; j++) {
+                if (this.seating.get(i)[j] == 1) {
+                    s += this.seatingArrangement[i] + "" + (j + 1) + " ";
+                }
+            }
+        }
+        return s.trim();
+    }
 }
