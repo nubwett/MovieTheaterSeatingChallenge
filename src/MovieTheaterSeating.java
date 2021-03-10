@@ -20,7 +20,8 @@ public class MovieTheaterSeating {
     }
 
     /**
-     *
+     * grabs the best seats based on the number of people provided,
+     * and returns the seating assignment
      * @param numberOfSeats The number of seats that must be filled
      * @return the seats that have been filled in CSV format, or the empty
      *          string (""), if there no seats were able to be filled.

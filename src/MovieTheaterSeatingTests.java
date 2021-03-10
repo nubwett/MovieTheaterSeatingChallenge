@@ -3,7 +3,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-
 public class MovieTheaterSeatingTests {
     private static final int rows = 10;
     private static final int columns = 20;
@@ -51,5 +50,12 @@ public class MovieTheaterSeatingTests {
             seats.getBestSeats(20);
         }
         Assert.assertEquals(seats.getBestSeats(1), "");
+    }
+
+    @Test
+    public void addNoSpacing() {
+        seats.getBestSeats(16);
+        Assert.assertEquals(seats.getBestSeats(1), "F20");
+        Assert.assertEquals(seats.getBestSeats(1), "D1");
     }
 }
